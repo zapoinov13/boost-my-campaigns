@@ -227,7 +227,7 @@ function Landing() {
                 <img
                   src={yuriyAsset.url}
                   alt="Юрий — маркетолог и автор MarkVision AI"
-                  className="block aspect-[3/4] h-auto w-full object-cover grayscale"
+                  className="block aspect-[3/4] h-auto w-full object-cover"
                   loading="lazy"
                 />
               </div>
