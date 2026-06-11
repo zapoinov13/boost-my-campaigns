@@ -159,7 +159,7 @@ function Landing() {
 
             <div className="mt-8 grid gap-6 border-t border-ink/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10">
               <p className="text-[17px] leading-relaxed text-ink/80 text-pretty sm:text-lg">
-                Твой чек упёрся <span className="font-semibold text-ink">не в рынок</span>. Он упёрся в рутину. Ниже — как из неё выйти, не уходя из профессии.
+                Твой чек упёрся <span className="font-semibold text-ink">не в рынок</span>. Он упёрся в рутину. Ниже, как из неё выйти, не уходя из профессии.
               </p>
               <div className="flex flex-col gap-3">
                 <CTAButton>Написать в WhatsApp</CTAButton>
