@@ -150,7 +150,7 @@ function Landing() {
             <h1 className="font-display text-[34px] font-extrabold leading-[1.02] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
               Ты таргетолог?
               <br />
-              <span className="text-brand">Читай 60 секунд</span> — и реши сам, почему за ту же работу не брать{" "}
+              <span className="text-brand">Читай 60 секунд</span> и реши сам, почему за ту же работу не брать{" "}
               <span className="underline decoration-ink decoration-4 underline-offset-[6px]">
                 в 2–3 раза больше
               </span>
