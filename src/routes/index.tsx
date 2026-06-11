@@ -6,7 +6,7 @@ import logoAsset from "@/assets/markvision-logo.png.asset.json";
 const WHATSAPP_URL =
   "https://wa.me/77472842595?text=" +
   encodeURIComponent(
-    "Здравствуйте, Юрий! Прочитал статью — хочу разобрать свою ситуацию по таргету."
+    "Здравствуйте, Юрий! Прочитал статью. Хочу разобрать свою ситуацию по таргету."
   );
 
 const TITLE = "Таргетолог — зарабатывай в 2–3 раза больше за ту же работу";
