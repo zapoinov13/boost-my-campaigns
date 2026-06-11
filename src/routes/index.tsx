@@ -6,12 +6,12 @@ import logoAsset from "@/assets/markvision-logo.png.asset.json";
 const WHATSAPP_URL =
   "https://wa.me/77472842595?text=" +
   encodeURIComponent(
-    "Здравствуйте, Юрий! Прочитал статью — хочу разобрать свою ситуацию по таргету."
+    "Здравствуйте, Юрий! Прочитал статью. Хочу разобрать свою ситуацию по таргету."
   );
 
-const TITLE = "Таргетолог — зарабатывай в 2–3 раза больше за ту же работу";
+const TITLE = "Таргетолог. Зарабатывай в 2–3 раза больше за ту же работу";
 const DESCRIPTION =
-  "История Юрия из MarkVision AI: как маркетолог с 50+ кейсами автоматизировал креативы, запуски и отчёты, поднял чек и стал работать меньше. Разбор твоей ситуации — бесплатно, 20–30 минут.";
+  "История Юрия из MarkVision AI: как маркетолог с 50+ кейсами автоматизировал креативы, запуски и отчёты, поднял чек и стал работать меньше. Разбор твоей ситуации. Бесплатно, 20–30 минут.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,19 +48,19 @@ export const Route = createFileRoute("/")({
 });
 
 const PAINS = [
-  "Устал сам делать креативы — или платишь дизайнеру и ждёшь по три дня, пока клиент ждёт от тебя.",
+  "Устал сам делать креативы . или платишь дизайнеру и ждёшь по три дня, пока клиент ждёт от тебя.",
   "Тонешь в рекламных кабинетах: при 5–7 клиентах весь день уходит на ручные запуски, оптимизацию и правки.",
-  "Каждый вечер — отчёты. Таблицы, скрины, объяснения. И сообщение в 23:40: «А где отчёт за сегодня?»",
+  "Каждый вечер . отчёты. Таблицы, скрины, объяснения. И сообщение в 23:40: «А где отчёт за сегодня?»",
   "Хочешь поднять чек, но не понимаешь за что: клиент видит те же запуски, что и у спеца за 100 тысяч.",
-  "Больше клиентов взять физически некуда — в сутках 24 часа, и все они уже заняты.",
+  "Больше клиентов взять физически некуда . в сутках 24 часа, и все они уже заняты.",
   "Слышишь со всех сторон про ИИ и автоматизацию, но не знаешь, с чего начать и что из этого реально работает.",
 ];
 
 const NOW = [
-  "Стратегию, сценарии и сайты для рекламы готовит моя система — не я ночами.",
+  "Стратегию, сценарии и сайты для рекламы готовит моя система . не я ночами.",
   "Рекламу запускаю в один клик. Без часа в кабинете на каждую кампанию.",
   "Контент-завод присылает мне 5–10 готовых баннеров за 5 минут. Дизайнера в штате больше нет.",
-  "Видео для рекламы — тоже на автомате.",
+  "Видео для рекламы . тоже на автомате.",
   "Отчёты клиенты получают автоматически. Мои вечера снова мои.",
 ];
 
@@ -143,22 +143,14 @@ function Landing() {
         </div>
       </header>
 
-      {/* HERO — magazine */}
+      {/* HERO . magazine */}
       <section className="border-b border-ink/10">
         <div className="mx-auto max-w-3xl px-5 pt-10 pb-12 sm:px-8 md:max-w-4xl md:pt-16 md:pb-20">
           <div className="animate-fade-up">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              <span>№001 · Эссе</span>
-              <span className="h-px w-6 bg-ink/30" />
-              <span>Для таргетологов</span>
-              <span className="h-px w-6 bg-ink/30" />
-              <span>Чтение · 60 сек</span>
-            </div>
-
-            <h1 className="font-display mt-6 text-[34px] font-extrabold leading-[1.02] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="font-display text-[34px] font-extrabold leading-[1.02] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
               Ты таргетолог?
               <br />
-              <span className="text-brand">Читай 60 секунд</span> — и реши сам, почему за ту же работу не брать{" "}
+              <span className="text-brand">Читай 60 секунд</span> и реши сам, почему за ту же работу не брать{" "}
               <span className="underline decoration-ink decoration-4 underline-offset-[6px]">
                 в 2–3 раза больше
               </span>
@@ -167,7 +159,7 @@ function Landing() {
 
             <div className="mt-8 grid gap-6 border-t border-ink/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10">
               <p className="text-[17px] leading-relaxed text-ink/80 text-pretty sm:text-lg">
-                Твой чек упёрся <span className="font-semibold text-ink">не в рынок</span>. Он упёрся в рутину. Ниже — как из неё выйти, не уходя из профессии.
+                Твой чек упёрся <span className="font-semibold text-ink">не в рынок</span>. Он упёрся в рутину. Ниже, как из неё выйти, не уходя из профессии.
               </p>
               <div className="flex flex-col gap-3">
                 <CTAButton>Написать в WhatsApp</CTAButton>
@@ -180,7 +172,7 @@ function Landing() {
         </div>
       </section>
 
-      {/* ЗНАКОМО — magazine columns */}
+      {/* ЗНАКОМО . magazine columns */}
       <section className="border-b border-ink/10 bg-stone">
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 md:max-w-5xl md:py-24">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
@@ -190,7 +182,7 @@ function Landing() {
                 Знакомо?
               </h2>
               <p className="mt-5 text-[15px] leading-relaxed text-ink/70">
-                Если кивнул хотя бы на два пункта — эта информация для тебя.
+                Если кивнул хотя бы на два пункта . эта информация для тебя.
               </p>
             </div>
 
@@ -213,7 +205,7 @@ function Landing() {
         </div>
       </section>
 
-      {/* ЮРИЙ — magazine feature */}
+      {/* ЮРИЙ . magazine feature */}
       <section className="border-b border-ink/10">
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 md:max-w-6xl md:py-24">
           <SectionLabel>Автор</SectionLabel>
@@ -226,7 +218,7 @@ function Landing() {
               <div className="relative border border-ink bg-stone">
                 <img
                   src={yuriyAsset.url}
-                  alt="Юрий — маркетолог и автор MarkVision AI"
+                  alt="Юрий . маркетолог и автор MarkVision AI"
                   className="block aspect-[3/4] h-auto w-full object-cover"
                   loading="lazy"
                 />
@@ -246,12 +238,12 @@ function Landing() {
 
               <div className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]">
                 <p>
-                  И все эти годы я жил так же, как ты сейчас. Когда клиентов стало 7–10, я понял, что больше не таргетолог — я заполнятель отчётов. Утром ручные запуски, днём правки, вечером таблицы. Дизайнерам платил и ждал креативы днями.
+                  И все эти годы я жил так же, как ты сейчас. Когда клиентов стало 7–10, я понял, что больше не таргетолог . я заполнятель отчётов. Утром ручные запуски, днём правки, вечером таблицы. Дизайнерам платил и ждал креативы днями.
                 </p>
                 <p>
                   В какой-то момент мне это надоело, и я собрал систему под собственную работу.{" "}
                   <span className="bg-ink px-1.5 py-0.5 font-semibold text-paper">
-                    Не для продажи курса — для себя.
+                    Не для продажи курса . для себя.
                   </span>
                 </p>
               </div>
@@ -280,7 +272,7 @@ function Landing() {
 
               <div className="mt-10 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]">
                 <p>
-                  Я сократил штат, веду клиентов дороже и трачу на работу меньше времени. Система обучена на стратегиях из моих кейсов — это не «промты в ChatGPT», это полноценная автоматизация: ИИ-таргетолог и ИИ-маркетолог от практика.
+                  Я сократил штат, веду клиентов дороже и трачу на работу меньше времени. Система обучена на стратегиях из моих кейсов . это не «промты в ChatGPT», это полноценная автоматизация: ИИ-таргетолог и ИИ-маркетолог от практика.
                 </p>
                 <p>Мои продукты работают в продакшене:</p>
 
@@ -318,7 +310,7 @@ function Landing() {
               </div>
 
               <blockquote className="font-display mt-10 border-l-4 border-brand pl-5 text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-3xl">
-                Хочу делиться инструментами с коллегами — таргетологами и маркетологами.
+                Хочу делиться инструментами с коллегами . таргетологами и маркетологами.
               </blockquote>
             </div>
           </div>
@@ -346,10 +338,10 @@ function Landing() {
                 <span className="bg-brand px-1.5 py-0.5 font-semibold text-paper">
                   в 2–3 раза
                 </span>{" "}
-                — и при этом работать меньше.
+                . и при этом работать меньше.
               </p>
               <p className="text-paper/70">
-                Бесплатно. Без курса и без дожима: посмотришь систему вживую, заберёшь план под свои проекты — а дальше решишь сам.
+                Бесплатно. Без курса и без дожима: посмотришь систему вживую, заберёшь план под свои проекты . а дальше решишь сам.
               </p>
             </div>
 
