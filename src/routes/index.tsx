@@ -145,24 +145,42 @@ function Landing() {
 
       {/* HERO . magazine */}
       <section className="border-b border-ink/10">
-        <div className="mx-auto max-w-3xl px-5 pt-10 pb-12 sm:px-8 md:max-w-4xl md:pt-16 md:pb-20">
+        <div className="mx-auto max-w-3xl px-5 pt-10 pb-12 sm:px-8 md:max-w-5xl md:pt-16 md:pb-20">
           <div className="animate-fade-up">
-            <h1 className="font-display text-[34px] font-extrabold leading-[1.02] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="font-display text-[32px] font-extrabold leading-[1.04] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
               Ты таргетолог?
               <br />
-              <span className="text-brand">Читай 60 секунд</span> и реши сам, почему за ту же работу не брать{" "}
+              <span className="text-brand">Смотри видео</span> и узнай, как работает моя система, с которой я увеличил свой чек{" "}
               <span className="underline decoration-ink decoration-4 underline-offset-[6px]">
-                в 2–3 раза больше
-              </span>
-              .
+                в 3 раза
+              </span>{" "}
+              и стал работать меньше.
             </h1>
 
+            {/* VIDEO */}
+            <div className="mt-10 border border-ink bg-ink">
+              <div className="relative aspect-video w-full">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Как работает моя система"
+                  className="absolute inset-0 h-full w-full"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+            <p className="mt-3 text-[12px] uppercase tracking-wider text-muted-foreground">
+              Видео · 2 минуты · без воды
+            </p>
+
+            {/* CTA под видео */}
             <div className="mt-8 grid gap-6 border-t border-ink/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10">
-              <p className="text-[17px] leading-relaxed text-ink/80 text-pretty sm:text-lg">
-                Твой чек упёрся <span className="font-semibold text-ink">не в рынок</span>. Он упёрся в рутину. Ниже, как из неё выйти, не уходя из профессии.
+              <p className="font-display text-[22px] font-extrabold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
+                Хочу такую систему.
               </p>
               <div className="flex flex-col gap-3">
-                <CTAButton>Написать в WhatsApp</CTAButton>
+                <CTAButton>Хочу такую систему</CTAButton>
                 <p className="text-[12px] uppercase tracking-wider text-muted-foreground">
                   20–30 минут · бесплатно · без курса
                 </p>
@@ -171,6 +189,7 @@ function Landing() {
           </div>
         </div>
       </section>
+
 
       {/* ЗНАКОМО . magazine columns */}
       <section className="border-b border-ink/10 bg-stone">
