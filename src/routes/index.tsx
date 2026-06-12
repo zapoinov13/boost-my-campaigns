@@ -154,7 +154,7 @@ function Landing() {
                   Система роста
                 </span>
                 <h1 className="font-display text-[48px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[72px] md:text-[96px] lg:text-[112px]">
-                  Ты <br className="sm:hidden" />тарге-<br />толог?
+                  Ты таргетолог?
                 </h1>
               </div>
 
