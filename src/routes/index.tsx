@@ -143,23 +143,40 @@ function Landing() {
         </div>
       </header>
 
-      {/* HERO . magazine */}
+      {/* HERO . magazine editorial */}
       <section className="border-b border-ink/10">
-        <div className="mx-auto max-w-3xl px-5 pt-10 pb-12 sm:px-8 md:max-w-5xl md:pt-16 md:pb-20">
-          <div className="animate-fade-up">
-            <h1 className="font-display text-[32px] font-extrabold leading-[1.04] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-              Ты таргетолог?
-              <br />
-              <span className="text-brand">Смотри видео</span> и узнай, как работает моя система, с которой я увеличил свой чек{" "}
-              <span className="underline decoration-ink decoration-4 underline-offset-[6px]">
-                в 3 раза
-              </span>{" "}
-              и стал работать меньше.
-            </h1>
+        <div className="mx-auto max-w-3xl px-6 pt-10 pb-14 sm:px-8 md:max-w-5xl md:pt-20 md:pb-24">
+          <div className="animate-fade-up flex flex-col gap-10">
+            {/* Headline block */}
+            <div className="flex flex-col gap-6">
+              <div className="space-y-2">
+                <span className="block text-[12px] font-extrabold uppercase tracking-[0.22em] text-brand">
+                  Система роста
+                </span>
+                <h1 className="font-display text-[48px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[72px] md:text-[96px] lg:text-[112px]">
+                  Ты <br className="sm:hidden" />тарге-<br />толог?
+                </h1>
+              </div>
 
-            {/* VIDEO */}
-            <div className="mt-10 border border-ink bg-ink">
-              <div className="relative aspect-video w-full">
+              <div className="h-[2px] w-12 bg-ink" />
+
+              <p className="font-body text-[18px] leading-[1.4] font-medium text-ink/90 text-pretty sm:text-xl md:max-w-2xl">
+                Смотри видео и узнай, как работает моя система, с которой я увеличил свой чек{" "}
+                <span className="font-extrabold italic border-b-2 border-ink">в 3 раза</span>{" "}
+                и стал работать меньше.
+              </p>
+            </div>
+
+            {/* Video block */}
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <span className="block h-2 w-2 rounded-full bg-brand animate-pulse" />
+                <span className="text-[13px] font-extrabold uppercase tracking-widest text-ink">
+                  Смотри видео
+                </span>
+              </div>
+
+              <div className="relative aspect-video w-full border border-ink bg-ink">
                 <iframe
                   src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                   title="Как работает моя система"
@@ -168,14 +185,16 @@ function Landing() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
+                <div className="pointer-events-none absolute bottom-3 right-3">
+                  <span className="font-display text-[10px] font-extrabold uppercase tracking-tighter text-paper/60">
+                    Video Case / 2025
+                  </span>
+                </div>
               </div>
             </div>
-            <p className="mt-3 text-[12px] uppercase tracking-wider text-muted-foreground">
-              Видео · 2 минуты · без воды
-            </p>
 
-            {/* CTA под видео */}
-            <div className="mt-8 grid gap-6 border-t border-ink/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10">
+            {/* CTA */}
+            <div className="grid gap-6 border-t border-ink/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10">
               <p className="font-display text-[22px] font-extrabold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
                 Хочу такую систему.
               </p>
@@ -189,6 +208,7 @@ function Landing() {
           </div>
         </div>
       </section>
+
 
 
       {/* ЗНАКОМО . magazine columns */}
