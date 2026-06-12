@@ -153,8 +153,8 @@ function Landing() {
                 <span className="block text-[12px] font-extrabold uppercase tracking-[0.22em] text-brand">
                   Система роста
                 </span>
-                <h1 className="font-display text-[48px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[72px] md:text-[96px] lg:text-[112px]">
-                  Ты таргетолог?
+                <h1 className="font-display text-[34px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[56px] md:text-[72px] lg:text-[84px]">
+                  Ты таргетолог или у тебя своё агентство?
                 </h1>
               </div>
 
