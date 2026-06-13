@@ -150,9 +150,6 @@ function Landing() {
             {/* Headline block */}
             <div className="flex flex-col gap-6">
               <div className="space-y-2">
-                <span className="block text-[12px] font-extrabold uppercase tracking-[0.22em] text-brand">
-                  Система роста
-                </span>
                 <h1 className="font-display text-[34px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[56px] md:text-[72px] lg:text-[84px]">
                   Ты таргетолог или у тебя своё агентство?
                 </h1>
@@ -200,9 +197,6 @@ function Landing() {
               </p>
               <div className="flex flex-col gap-3">
                 <CTAButton>Хочу такую систему</CTAButton>
-                <p className="text-[12px] uppercase tracking-wider text-muted-foreground">
-                  20–30 минут · бесплатно · без курса
-                </p>
               </div>
             </div>
           </div>
@@ -216,8 +210,7 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 md:max-w-5xl md:py-24">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <div className="md:sticky md:top-24 md:self-start">
-              <SectionLabel>Узнаёшь себя?</SectionLabel>
-              <h2 className="font-display mt-4 text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
+              <h2 className="font-display text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
                 Знакомо?
               </h2>
               <p className="mt-5 text-[15px] leading-relaxed text-ink/70">
@@ -271,7 +264,7 @@ function Landing() {
             <div>
               <div className="font-display first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[64px] first-letter:font-extrabold first-letter:leading-[0.85] first-letter:text-brand sm:first-letter:text-[88px]">
                 <p className="text-[17px] leading-[1.6] text-ink/85 sm:text-lg">
-                  6 лет я работаю маркетологом. Специалист по рекламе, за это время собрал больше <span className="font-semibold text-ink">50 кейсов</span> в разных нишах.
+                  6 лет я работаю маркетологом. Специалист по рекламе, за это время собрал больше <span className="font-semibold text-ink">50 кейсов</span>.
                 </p>
               </div>
 
@@ -388,9 +381,6 @@ function Landing() {
               <CTAButton variant="inverse" className="!bg-paper !text-ink !border-paper hover:!bg-brand hover:!text-paper hover:!border-brand">
                 Написать в WhatsApp
               </CTAButton>
-              <p className="text-[12px] uppercase tracking-wider text-paper/60">
-                20–30 минут · бесплатно
-              </p>
             </div>
           </div>
         </div>
