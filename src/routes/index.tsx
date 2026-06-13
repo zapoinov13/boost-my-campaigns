@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle, Check } from "lucide-react";
+import { ArrowRight, MessageCircle, Check, Play } from "lucide-react";
+import { useState } from "react";
 import yuriyAsset from "@/assets/yuriy.png.asset.json";
 import logoAsset from "@/assets/markvision-logo.png.asset.json";
 
