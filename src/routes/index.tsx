@@ -157,9 +157,15 @@ function Landing() {
 
               <div className="h-[2px] w-12 bg-ink" />
 
-              <p className="font-body text-[18px] leading-[1.4] font-medium text-ink/90 text-pretty sm:text-xl md:max-w-2xl">
-                Смотри видео и узнай, как работает моя система, с которой я увеличил свой чек{" "}
-                <span className="font-extrabold italic border-b-2 border-ink">в 3 раза</span>{" "}
+              <p className="font-body text-[18px] leading-[1.45] font-medium text-ink/90 text-pretty sm:text-xl md:max-w-2xl">
+                Система для маркетологов, таргетологов и SMM, которая автоматизирует{" "}
+                <span className="font-extrabold text-ink">создание контента, запуск рекламы и отчёты</span>{" "}
+                . веди больше проектов, делай меньше действий, поднимай чек.
+              </p>
+
+              <p className="font-body text-[15.5px] leading-[1.5] text-ink/70 text-pretty sm:text-base md:max-w-2xl">
+                Смотри видео и узнай, как я увеличил свой чек{" "}
+                <span className="font-extrabold italic text-ink border-b-2 border-ink">в 3 раза</span>{" "}
                 и стал работать меньше.
               </p>
             </div>
@@ -255,9 +261,8 @@ function Landing() {
                   loading="lazy"
                 />
               </div>
-              <figcaption className="mt-3 flex items-center justify-between gap-3 text-[12px] uppercase tracking-wider text-muted-foreground">
-                <span>Юрий · MarkVision AI</span>
-                <span>6 лет · 50+ кейсов</span>
+              <figcaption className="mt-3 text-[12px] uppercase tracking-wider text-muted-foreground">
+                Юрий · MarkVision AI
               </figcaption>
             </figure>
 
@@ -287,8 +292,7 @@ function Landing() {
               </dl>
 
               <p className="font-display mt-8 text-[22px] font-semibold leading-[1.25] tracking-tight text-ink text-balance sm:text-[26px]">
-                6 лет работаю маркетологом. Собрал больше{" "}
-                <span className="text-brand">50 кейсов</span> — и в какой-то момент понял, что больше не таргетолог. Я заполнятель отчётов.
+                В какой-то момент я понял . больше не таргетолог. <span className="text-brand">Я заполнятель отчётов.</span>
               </p>
 
               <div className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]">
