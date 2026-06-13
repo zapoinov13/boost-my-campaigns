@@ -157,9 +157,15 @@ function Landing() {
 
               <div className="h-[2px] w-12 bg-ink" />
 
-              <p className="font-body text-[18px] leading-[1.4] font-medium text-ink/90 text-pretty sm:text-xl md:max-w-2xl">
-                Смотри видео и узнай, как работает моя система, с которой я увеличил свой чек{" "}
-                <span className="font-extrabold italic border-b-2 border-ink">в 3 раза</span>{" "}
+              <p className="font-body text-[18px] leading-[1.45] font-medium text-ink/90 text-pretty sm:text-xl md:max-w-2xl">
+                Система для маркетологов, таргетологов и SMM, которая автоматизирует{" "}
+                <span className="font-extrabold text-ink">создание контента, запуск рекламы и отчёты</span>{" "}
+                . веди больше проектов, делай меньше действий, поднимай чек.
+              </p>
+
+              <p className="font-body text-[15.5px] leading-[1.5] text-ink/70 text-pretty sm:text-base md:max-w-2xl">
+                Смотри видео и узнай, как я увеличил свой чек{" "}
+                <span className="font-extrabold italic text-ink border-b-2 border-ink">в 3 раза</span>{" "}
                 и стал работать меньше.
               </p>
             </div>
