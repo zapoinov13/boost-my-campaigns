@@ -262,23 +262,47 @@ function Landing() {
             </figure>
 
             <div>
-              <div className="font-display first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[64px] first-letter:font-extrabold first-letter:leading-[0.85] first-letter:text-brand sm:first-letter:text-[88px]">
-                <p className="text-[17px] leading-[1.6] text-ink/85 sm:text-lg">
-                  6 лет я работаю маркетологом. Специалист по рекламе, за это время собрал больше <span className="font-semibold text-ink">50 кейсов</span>.
-                </p>
-              </div>
+              {/* Stats strip */}
+              <dl className="grid grid-cols-3 border-y-2 border-ink">
+                {[
+                  { k: "6", l: "лет в рекламе" },
+                  { k: "50+", l: "кейсов" },
+                  { k: "7–10", l: "клиентов / мес" },
+                ].map((s, i) => (
+                  <div
+                    key={s.k}
+                    className={
+                      "px-3 py-4 sm:px-5 sm:py-5 " +
+                      (i > 0 ? "border-l border-ink/20" : "")
+                    }
+                  >
+                    <dt className="font-display text-[28px] font-extrabold leading-none tracking-tight text-brand sm:text-[40px]">
+                      {s.k}
+                    </dt>
+                    <dd className="mt-2 text-[10.5px] uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px]">
+                      {s.l}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+
+              <p className="font-display mt-8 text-[22px] font-semibold leading-[1.25] tracking-tight text-ink text-balance sm:text-[26px]">
+                6 лет работаю маркетологом. Собрал больше{" "}
+                <span className="text-brand">50 кейсов</span> — и в какой-то момент понял, что больше не таргетолог. Я заполнятель отчётов.
+              </p>
 
               <div className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]">
                 <p>
-                  И все эти годы я жил так же, как ты сейчас. Когда клиентов стало 7–10, я понял, что больше не таргетолог . я заполнятель отчётов. Утром ручные запуски, днём правки, вечером таблицы. Дизайнерам платил и ждал креативы днями.
-                </p>
-                <p>
-                  В какой-то момент мне это надоело, и я собрал систему под собственную работу.{" "}
-                  <span className="bg-ink px-1.5 py-0.5 font-semibold text-paper">
-                    Не для продажи курса . для себя.
-                  </span>
+                  Когда клиентов стало 7–10, всё посыпалось. Утром ручные запуски, днём правки, вечером таблицы. Дизайнерам платил и ждал креативы днями.
                 </p>
               </div>
+
+              {/* Pull quote */}
+              <figure className="mt-8 border-l-4 border-brand bg-stone/60 px-5 py-5 sm:px-7 sm:py-6">
+                <blockquote className="font-display text-[20px] font-extrabold leading-[1.2] tracking-tight text-ink sm:text-[26px]">
+                  Я собрал систему под собственную работу. Не для продажи курса — для себя.
+                </blockquote>
+              </figure>
 
               {/* Что у меня сейчас */}
               <div className="mt-10 border-t-2 border-ink pt-6">
