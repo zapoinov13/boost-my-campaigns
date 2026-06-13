@@ -184,14 +184,35 @@ function Landing() {
               </div>
 
               <div className="relative aspect-video w-full border border-ink bg-ink">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Как работает моя система"
-                  className="absolute inset-0 h-full w-full"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
+                {videoLoaded ? (
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1`}
+                    title="Как работает моя система"
+                    className="absolute inset-0 h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setVideoLoaded(true)}
+                    className="group absolute inset-0 h-full w-full overflow-hidden"
+                    aria-label="Play video"
+                  >
+                    <img
+                      src={`https://i.ytimg.com/vi/${YOUTUBE_ID}/hqdefault.jpg`}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-100"
+                    />
+                    <span className="absolute inset-0 grid place-items-center">
+                      <span className="grid h-16 w-16 place-items-center rounded-full bg-brand text-paper shadow-lg transition-transform group-hover:scale-110 sm:h-20 sm:w-20">
+                        <Play className="ml-1 h-7 w-7 fill-paper sm:h-8 sm:w-8" strokeWidth={0} />
+                      </span>
+                    </span>
+                  </button>
+                )}
                 <div className="pointer-events-none absolute bottom-3 right-3">
                   <span className="font-display text-[10px] font-extrabold uppercase tracking-tighter text-paper/60">
                     Video Case / 2025
@@ -201,13 +222,8 @@ function Landing() {
             </div>
 
             {/* CTA */}
-            <div className="grid gap-6 border-t border-ink/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10">
-              <p className="font-display text-[22px] font-extrabold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
-                Хочу такую систему.
-              </p>
-              <div className="flex flex-col gap-3">
-                <CTAButton>Хочу такую систему</CTAButton>
-              </div>
+            <div className="border-t border-ink/15 pt-6">
+              <CTAButton>Хочу такую систему</CTAButton>
             </div>
           </div>
         </div>
