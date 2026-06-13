@@ -292,8 +292,7 @@ function Landing() {
               </dl>
 
               <p className="font-display mt-8 text-[22px] font-semibold leading-[1.25] tracking-tight text-ink text-balance sm:text-[26px]">
-                6 лет работаю маркетологом. Собрал больше{" "}
-                <span className="text-brand">50 кейсов</span> — и в какой-то момент понял, что больше не таргетолог. Я заполнятель отчётов.
+                В какой-то момент я понял . больше не таргетолог. <span className="text-brand">Я заполнятель отчётов.</span>
               </p>
 
               <div className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]">
