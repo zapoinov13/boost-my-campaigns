@@ -261,9 +261,8 @@ function Landing() {
                   loading="lazy"
                 />
               </div>
-              <figcaption className="mt-3 flex items-center justify-between gap-3 text-[12px] uppercase tracking-wider text-muted-foreground">
-                <span>Юрий · MarkVision AI</span>
-                <span>6 лет · 50+ кейсов</span>
+              <figcaption className="mt-3 text-[12px] uppercase tracking-wider text-muted-foreground">
+                Юрий · MarkVision AI
               </figcaption>
             </figure>
 
