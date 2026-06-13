@@ -210,8 +210,7 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 md:max-w-5xl md:py-24">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <div className="md:sticky md:top-24 md:self-start">
-              <SectionLabel></SectionLabel>
-              <h2 className="font-display mt-4 text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
+              <h2 className="font-display text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
                 Знакомо?
               </h2>
               <p className="mt-5 text-[15px] leading-relaxed text-ink/70">
