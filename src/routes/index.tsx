@@ -125,7 +125,10 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
+const YOUTUBE_ID = "dQw4w9WgXcQ";
+
 function Landing() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   return (
     <main className="min-h-screen bg-paper text-ink overflow-x-hidden">
       {/* HEADER */}
