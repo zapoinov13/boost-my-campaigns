@@ -12,4 +12,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Required outside Lovable sandbox so `vite build` emits a Vercel-compatible Nitro output.
+  nitro: { preset: "vercel" },
 });
