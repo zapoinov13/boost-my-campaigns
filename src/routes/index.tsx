@@ -3,11 +3,12 @@ import { ArrowRight, MessageCircle, Check, Play } from "lucide-react";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import yuriyUrl from "@/assets/yuriy.png";
 import logoUrl from "@/assets/markvision-logo.png";
+import { trackMetaLead } from "@/lib/meta-pixel";
 
 const WHATSAPP_URL =
   "https://wa.me/77472842595?text=" +
   encodeURIComponent(
-    "Здравствуйте, Юрий! Прочитал статью. Хочу разобрать свою ситуацию по таргету."
+    "Юрий, привет! Хочу узнать подробнее про систему."
   );
 
 const TITLE = "Таргетолог. Зарабатывай в 2–3 раза больше за ту же работу";
@@ -86,10 +87,12 @@ function CTAButton({
   children,
   variant = "primary",
   className = "",
+  leadSource = "whatsapp-cta",
 }: {
   children: React.ReactNode;
   variant?: "primary" | "inverse";
   className?: string;
+  leadSource?: string;
 }) {
   const styles =
     variant === "primary"
@@ -100,6 +103,7 @@ function CTAButton({
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackMetaLead(leadSource)}
       className={
         "group inline-flex w-full items-center justify-between gap-3 rounded-none px-5 py-4 text-[15px] font-semibold transition-colors sm:w-auto sm:px-7 sm:py-5 sm:text-base " +
         styles +
@@ -226,6 +230,7 @@ function Landing() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackMetaLead("header-whatsapp")}
             className="inline-flex shrink-0 items-center gap-2 border border-ink px-3 py-1.5 text-xs font-semibold text-ink transition-colors hover:bg-ink hover:text-paper sm:px-4 sm:py-2 sm:text-sm"
           >
             <MessageCircle className="h-4 w-4" strokeWidth={2.2} />
@@ -241,8 +246,11 @@ function Landing() {
             {/* Headline block */}
             <div className="flex flex-col gap-4 sm:gap-6 lg:gap-5 lg:py-2">
               <div className="space-y-2">
-                <h1 className="font-display text-[30px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[56px] md:text-[72px] lg:text-[46px] lg:leading-[0.98] xl:text-[54px] 2xl:text-[58px]">
-                  Ты таргетолог или у тебя своё агентство?
+                <h1 className="font-display text-[32px] font-extrabold uppercase tracking-[-0.03em] text-ink leading-[1.06] [font-feature-settings:normal] sm:text-[52px] sm:leading-[1.04] md:text-[64px] lg:text-[46px] lg:leading-[1.05] xl:text-[54px]">
+                  <span className="block">Ты таргетолог или</span>
+                  <span className="block">
+                    у тебя <span className="text-brand">свое агентство?</span>
+                  </span>
                 </h1>
               </div>
 
@@ -262,7 +270,7 @@ function Landing() {
 
               {/* CTA - desktop only (under text, left column) */}
               <div className="hidden lg:block border-t border-ink/15 pt-5">
-                <CTAButton>Хочу такую систему</CTAButton>
+                <CTAButton leadSource="hero-desktop">Хочу такую систему</CTAButton>
               </div>
             </div>
 
@@ -315,7 +323,7 @@ function Landing() {
 
             {/* CTA - mobile / tablet only */}
             <div className="border-t border-ink/15 pt-4 sm:pt-6 lg:hidden">
-              <CTAButton>Хочу такую систему</CTAButton>
+              <CTAButton leadSource="hero-mobile">Хочу такую систему</CTAButton>
             </div>
           </div>
         </div>
@@ -407,6 +415,7 @@ function Landing() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackMetaLead("author-whatsapp")}
                   className="mt-8 block border border-ink bg-stone/60 px-5 py-5 transition-colors hover:bg-stone sm:px-7 sm:py-6"
                 >
                   <p className="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
@@ -499,7 +508,11 @@ function Landing() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <CTAButton variant="inverse" className="!bg-paper !text-ink !border-paper hover:!bg-brand hover:!text-paper hover:!border-brand">
+              <CTAButton
+                variant="inverse"
+                leadSource="footer-whatsapp"
+                className="!bg-paper !text-ink !border-paper hover:!bg-brand hover:!text-paper hover:!border-brand"
+              >
                 Написать в WhatsApp
               </CTAButton>
             </div>
