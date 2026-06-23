@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle, Check, Play } from "lucide-react";
-import { useState } from "react";
-import yuriyAsset from "@/assets/yuriy.png.asset.json";
-import logoAsset from "@/assets/markvision-logo.png.asset.json";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import yuriyUrl from "@/assets/yuriy.png";
+import logoUrl from "@/assets/markvision-logo.png";
 
 const WHATSAPP_URL =
   "https://wa.me/77472842595?text=" +
@@ -23,16 +23,16 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: yuriyAsset.url },
+      { property: "og:image", content: yuriyUrl },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
-      { name: "twitter:image", content: yuriyAsset.url },
+      { name: "twitter:image", content: yuriyUrl },
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "icon", type: "image/png", href: logoAsset.url },
+      { rel: "icon", type: "image/png", href: logoUrl },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
         rel: "preconnect",
@@ -73,9 +73,9 @@ function Logo({ className = "" }: { className?: string }) {
       aria-label="MarkVision AI"
     >
       <img
-        src={logoAsset.url}
+        src={logoUrl}
         alt="MarkVision AI"
-        className="h-8 w-auto sm:h-9"
+        className="h-9 w-auto sm:h-11"
         loading="eager"
       />
     </a>
@@ -125,6 +125,93 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
+type BridgeVariant = "to-stone" | "to-paper" | "to-ink" | "to-footer";
+
+function SectionBridge({
+  variant,
+  label,
+}: {
+  variant: BridgeVariant;
+  label?: string;
+}) {
+  if (!label && variant === "to-footer") {
+    return <div className={`section-bridge section-bridge--${variant}`} aria-hidden />;
+  }
+
+  return (
+    <div className={`section-bridge section-bridge--${variant}`} aria-hidden>
+      {label ? (
+        <div className="section-bridge__inner">
+          <div className="section-bridge__label">
+            <span className="section-bridge__line" />
+            <span className="section-bridge__dot" />
+            <span>{label}</span>
+            <span className="section-bridge__dot" />
+            <span className="section-bridge__line" />
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function RevealSection({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={ref}
+      className={`reveal-section ${visible ? "is-visible" : ""} ${className}`.trim()}
+    >
+      {children}
+    </section>
+  );
+}
+
+function Reveal({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  return (
+    <div
+      className={`reveal-item ${className}`.trim()}
+      style={{ "--reveal-delay": `${delay}ms` } as CSSProperties}
+    >
+      {children}
+    </div>
+  );
+}
+
 const YOUTUBE_ID = "dQw4w9WgXcQ";
 
 function Landing() {
@@ -133,7 +220,7 @@ function Landing() {
     <main className="min-h-screen bg-paper text-ink overflow-x-hidden">
       {/* HEADER */}
       <header className="sticky top-0 z-30 border-b border-ink/10 bg-paper/90 backdrop-blur">
-        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 py-3.5 sm:px-8">
+        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 py-2.5 sm:px-8 sm:py-3.5">
           <Logo />
           <a
             href={WHATSAPP_URL}
@@ -147,43 +234,48 @@ function Landing() {
         </div>
       </header>
 
-      {/* HERO . magazine editorial */}
-      <section className="border-b border-ink/10">
-        <div className="mx-auto max-w-3xl px-6 pt-10 pb-14 sm:px-8 md:max-w-5xl md:pt-20 md:pb-24">
-          <div className="animate-fade-up flex flex-col gap-10">
+      {/* HERO */}
+      <RevealSection>
+        <div className="mx-auto max-w-3xl px-5 pt-6 pb-8 sm:px-8 sm:pt-10 sm:pb-14 md:max-w-5xl md:pt-20 md:pb-24 lg:max-w-6xl lg:px-10 lg:pt-10 lg:pb-12">
+          <div className="animate-fade-up flex flex-col gap-6 sm:gap-8 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-x-12 lg:gap-y-0 xl:gap-x-16 lg:min-h-[calc(100svh-4.5rem)]">
             {/* Headline block */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 sm:gap-6 lg:gap-5 lg:py-2">
               <div className="space-y-2">
-                <h1 className="font-display text-[34px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[56px] md:text-[72px] lg:text-[84px]">
+                <h1 className="font-display text-[30px] font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-[56px] md:text-[72px] lg:text-[46px] lg:leading-[0.98] xl:text-[54px] 2xl:text-[58px]">
                   Ты таргетолог или у тебя своё агентство?
                 </h1>
               </div>
 
               <div className="h-[2px] w-12 bg-ink" />
 
-              <p className="font-body text-[18px] leading-[1.45] font-medium text-ink/90 text-pretty sm:text-xl md:max-w-2xl">
+              <p className="font-body text-[17px] leading-[1.4] font-medium text-ink/90 text-pretty sm:text-[18px] sm:leading-[1.45] sm:text-xl md:max-w-2xl lg:max-w-none lg:text-[17px] lg:leading-[1.5] xl:text-lg">
                 Система для маркетологов, таргетологов и SMM, которая автоматизирует{" "}
                 <span className="font-extrabold text-ink">создание контента, запуск рекламы и отчёты</span>{" "}
                 . веди больше проектов, делай меньше действий, поднимай чек.
               </p>
 
-              <p className="font-body text-[15.5px] leading-[1.5] text-ink/70 text-pretty sm:text-base md:max-w-2xl">
+              <p className="font-body text-[15px] leading-[1.45] text-ink/70 text-pretty sm:text-[15.5px] sm:leading-[1.5] sm:text-base md:max-w-2xl lg:max-w-none">
                 Смотри видео и узнай, как я увеличил свой чек{" "}
                 <span className="font-extrabold italic text-ink border-b-2 border-ink">в 3 раза</span>{" "}
                 и стал работать меньше.
               </p>
+
+              {/* CTA - desktop only (under text, left column) */}
+              <div className="hidden lg:block border-t border-ink/15 pt-5">
+                <CTAButton>Хочу такую систему</CTAButton>
+              </div>
             </div>
 
             {/* Video block */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 sm:gap-3 lg:py-2">
               <div className="flex items-center gap-3">
                 <span className="block h-2 w-2 rounded-full bg-brand animate-pulse" />
-                <span className="text-[13px] font-extrabold uppercase tracking-widest text-ink">
+                <span className="text-[12px] font-extrabold uppercase tracking-widest text-ink sm:text-[13px]">
                   Смотри видео
                 </span>
               </div>
 
-              <div className="relative aspect-video w-full border border-ink bg-ink">
+              <div className="relative w-full border border-ink bg-ink max-sm:aspect-[16/8] sm:aspect-video">
                 {videoLoaded ? (
                   <iframe
                     src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1`}
@@ -221,34 +313,35 @@ function Landing() {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="border-t border-ink/15 pt-6">
+            {/* CTA - mobile / tablet only */}
+            <div className="border-t border-ink/15 pt-4 sm:pt-6 lg:hidden">
               <CTAButton>Хочу такую систему</CTAButton>
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
+      <SectionBridge variant="to-stone" label="01 · Проблема" />
 
-
-      {/* ЗНАКОМО . magazine columns */}
-      <section className="border-b border-ink/10 bg-stone">
+      {/* ЗНАКОМО */}
+      <RevealSection className="bg-stone">
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 md:max-w-5xl md:py-24">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
-            <div className="md:sticky md:top-24 md:self-start">
+            <Reveal className="md:sticky md:top-24 md:self-start" delay={0}>
               <h2 className="font-display text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
                 Знакомо?
               </h2>
               <p className="mt-5 text-[15px] leading-relaxed text-ink/70">
                 Если кивнул хотя бы на два пункта . эта информация для тебя.
               </p>
-            </div>
+            </Reveal>
 
             <ol className="grid">
               {PAINS.map((pain, i) => (
                 <li
                   key={i}
-                  className="grid grid-cols-[auto_minmax(0,1fr)] gap-4 border-b border-ink/15 py-5 first:border-t first:pt-5 sm:gap-6 sm:py-6"
+                  className="reveal-item grid grid-cols-[auto_minmax(0,1fr)] gap-4 border-b border-ink/15 py-5 first:border-t first:pt-5 sm:gap-6 sm:py-6"
+                  style={{ "--reveal-delay": `${80 + i * 70}ms` } as CSSProperties}
                 >
                   <span className="font-display text-2xl font-extrabold leading-none text-brand tabular-nums sm:text-3xl">
                     {String(i + 1).padStart(2, "0")}
@@ -261,75 +354,82 @@ function Landing() {
             </ol>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      {/* ЮРИЙ . magazine feature */}
-      <section className="border-b border-ink/10">
+      <SectionBridge variant="to-paper" label="02 · Решение" />
+
+      {/* ЮРИЙ */}
+      <RevealSection>
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 md:max-w-6xl md:py-24">
-          <SectionLabel>Автор</SectionLabel>
-          <h2 className="font-display mt-4 text-4xl font-extrabold leading-[0.95] tracking-tight text-balance sm:text-5xl md:text-7xl">
-            Меня зовут <span className="text-brand">Юрий</span>.
-          </h2>
+          <Reveal delay={0}>
+            <SectionLabel>Автор</SectionLabel>
+            <h2 className="font-display mt-4 text-4xl font-extrabold leading-[0.95] tracking-tight text-balance sm:text-5xl md:text-7xl">
+              Меня зовут <span className="text-brand">Юрий</span>.
+            </h2>
+          </Reveal>
 
           <div className="mt-10 grid gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-14">
-            <figure className="md:sticky md:top-24 md:self-start">
-              <div className="relative border border-ink bg-stone">
-                <img
-                  src={yuriyAsset.url}
-                  alt="Юрий . маркетолог и автор MarkVision AI"
-                  className="block aspect-[3/4] h-auto w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption className="mt-3 text-[12px] uppercase tracking-wider text-muted-foreground">
-                Юрий · MarkVision AI
-              </figcaption>
-            </figure>
+            <Reveal className="md:sticky md:top-24 md:self-start" delay={100}>
+              <figure>
+                <div className="relative border border-ink bg-ink">
+                  <img
+                    src={yuriyUrl}
+                    alt="Юрий, IT-предприниматель, маркетолог, резидент Astana Hub"
+                    className="block aspect-[2/3] h-auto w-full object-cover object-center"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="mt-3 text-[12px] uppercase tracking-wider text-muted-foreground">
+                  Юрий · MarkVision AI
+                </figcaption>
+              </figure>
+            </Reveal>
 
             <div>
-              {/* Stats strip */}
-              <dl className="grid grid-cols-3 border-y-2 border-ink">
-                {[
-                  { k: "6", l: "лет в рекламе" },
-                  { k: "50+", l: "кейсов" },
-                  { k: "7–10", l: "клиентов / мес" },
-                ].map((s, i) => (
-                  <div
-                    key={s.k}
-                    className={
-                      "px-3 py-4 sm:px-5 sm:py-5 " +
-                      (i > 0 ? "border-l border-ink/20" : "")
-                    }
-                  >
-                    <dt className="font-display text-[28px] font-extrabold leading-none tracking-tight text-brand sm:text-[40px]">
-                      {s.k}
-                    </dt>
-                    <dd className="mt-2 text-[10.5px] uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px]">
-                      {s.l}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-
-              <p className="font-display mt-8 text-[22px] font-semibold leading-[1.25] tracking-tight text-ink text-balance sm:text-[26px]">
-                В какой-то момент я понял . больше не таргетолог. <span className="text-brand">Я заполнятель отчётов.</span>
-              </p>
-
-              <div className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]">
-                <p>
-                  Когда клиентов стало 7–10, всё посыпалось. Утром ручные запуски, днём правки, вечером таблицы. Дизайнерам платил и ждал креативы днями.
+              <Reveal delay={160}>
+                <p className="font-display text-[22px] font-semibold leading-[1.25] tracking-tight text-ink text-balance sm:text-[26px]">
+                  Я IT-предприниматель, действующий маркетолог и резидент{" "}
+                  <span className="text-brand">Astana Hub</span>.
                 </p>
-              </div>
+              </Reveal>
 
-              {/* Pull quote */}
-              <figure className="mt-8 border-l-4 border-brand bg-stone/60 px-5 py-5 sm:px-7 sm:py-6">
-                <blockquote className="font-display text-[20px] font-extrabold leading-[1.2] tracking-tight text-ink sm:text-[26px]">
-                  Я собрал систему под собственную работу. Не для продажи курса — для себя.
-                </blockquote>
-              </figure>
+              <Reveal className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]" delay={220}>
+                <p>
+                  Упростил жизнь таргетологам и агентствам. Теперь у них денег больше, а работы в разы меньше.
+                </p>
+                <p>
+                  Собираю систему, где ИИ делает то, на что обычно уходит неделя: стратегия, крео, сайты, оптимизация рекламы. То, за что обычно платят команде из пяти человек, делает один сервис.
+                </p>
+              </Reveal>
 
-              {/* Что у меня сейчас */}
-              <div className="mt-10 border-t-2 border-ink pt-6">
+              <Reveal delay={280}>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 block border border-ink bg-stone/60 px-5 py-5 transition-colors hover:bg-stone sm:px-7 sm:py-6"
+                >
+                  <p className="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                    Напиши в WhatsApp
+                  </p>
+                  <p className="mt-3 text-[15.5px] leading-relaxed text-ink sm:text-[17px]">
+                    Покажу главное: как система{" "}
+                    <span className="font-semibold text-ink">запускает рекламу в пару кликов</span>,{" "}
+                    <span className="font-semibold text-ink">создаёт контент на месяц вперёд за полчаса</span>{" "}
+                    и <span className="font-semibold text-ink">делает сайты за 5–10 минут</span>.
+                  </p>
+                </a>
+              </Reveal>
+
+              <Reveal delay={340}>
+                <figure className="mt-8 border-l-4 border-brand bg-stone/60 px-5 py-5 sm:px-7 sm:py-6">
+                  <blockquote className="font-display text-[20px] font-extrabold leading-[1.2] tracking-tight text-ink sm:text-[26px]">
+                    Я собрал систему под собственную работу. Не для продажи, для себя.
+                  </blockquote>
+                </figure>
+              </Reveal>
+
+              <Reveal className="mt-10 border-t-2 border-ink pt-6" delay={400}>
                 <p className="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                   Что у меня сейчас
                 </p>
@@ -348,67 +448,40 @@ function Landing() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Reveal>
 
-              <div className="mt-10 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]">
+              <Reveal className="mt-10 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]" delay={460}>
                 <p>
-                  Я сократил штат, веду клиентов дороже и трачу на работу меньше времени. Система обучена на стратегиях из моих кейсов . это не «промты в ChatGPT», это полноценная автоматизация: ИИ-таргетолог и ИИ-маркетолог от практика.
+                  Я сократил штат, веду клиентов дороже и трачу на работу меньше времени. Система обучена на стратегиях из моих кейсов, это не «промты в ChatGPT», это полноценная автоматизация: ИИ-таргетолог и ИИ-маркетолог от практика.
                 </p>
-                <p>Мои продукты работают в продакшене:</p>
+              </Reveal>
 
-                <ul className="grid gap-0 border border-ink sm:grid-cols-3">
-                  {[
-                    { name: "MarkVision AI", tag: "AI-маркетолог" },
-                    { name: "AI-Таргетолог", tag: "Запуски в клик" },
-                    { name: "MarkVision Finance", tag: "Учёт и аналитика" },
-                  ].map((p, i) => (
-                    <li
-                      key={p.name}
-                      className={
-                        "p-5 " +
-                        (i > 0 ? "border-t border-ink sm:border-l sm:border-t-0" : "")
-                      }
-                    >
-                      <p className="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                        0{i + 1}
-                      </p>
-                      <p className="font-display mt-2 text-lg font-extrabold tracking-tight">
-                        {p.name}
-                      </p>
-                      <p className="mt-1 text-sm text-ink/70">{p.tag}</p>
-                    </li>
-                  ))}
-                </ul>
-
-                <p>
-                  Плюс решения, которые я собрал клиентам с чеками{" "}
-                  <span className="font-semibold text-ink">
-                    от 600 тысяч до 2 миллионов тенге
-                  </span>
-                  .
-                </p>
-              </div>
-
-              <blockquote className="font-display mt-10 border-l-4 border-brand pl-5 text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-3xl">
-                Хочу делиться инструментами с коллегами . таргетологами и маркетологами.
-              </blockquote>
+              <Reveal delay={520}>
+                <blockquote className="font-display mt-10 border-l-4 border-brand pl-5 text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-3xl">
+                  Сам маркетолог, но с системой зарабатываю больше и работаю меньше.
+                </blockquote>
+              </Reveal>
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
+
+      <SectionBridge variant="to-ink" label="03 · Действие" />
 
       {/* CTA */}
-      <section className="bg-ink text-paper">
+      <RevealSection className="bg-ink text-paper">
         <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 md:max-w-4xl md:py-24">
-          <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/60">
-            <span className="block h-px w-8 bg-paper/40" />
-            Если хочешь так же
-          </div>
-          <h2 className="font-display mt-5 text-4xl font-extrabold leading-[0.98] tracking-tight text-balance sm:text-5xl md:text-7xl">
-            Жми кнопку и пиши мне в&nbsp;<span className="text-brand">WhatsApp</span>.
-          </h2>
+          <Reveal delay={0}>
+            <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/60">
+              <span className="block h-px w-8 bg-paper/40" />
+              Если хочешь так же
+            </div>
+            <h2 className="font-display mt-5 text-4xl font-extrabold leading-[0.98] tracking-tight text-balance sm:text-5xl md:text-7xl">
+              Жми кнопку и пиши мне в&nbsp;<span className="text-brand">WhatsApp</span>.
+            </h2>
+          </Reveal>
 
-          <div className="mt-8 grid gap-6 border-t border-paper/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10">
+          <Reveal className="mt-8 grid gap-6 border-t border-paper/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10" delay={120}>
             <div className="space-y-4 text-[16px] leading-[1.65] text-paper/85 sm:text-[17px]">
               <p>
                 Созвонимся на 20–30 минут, разберём твою ситуацию: как устроена твоя работа, где утекает время и что автоматизируется первым.
@@ -430,15 +503,17 @@ function Landing() {
                 Написать в WhatsApp
               </CTAButton>
             </div>
-          </div>
+          </Reveal>
         </div>
-      </section>
+      </RevealSection>
 
-      <footer className="border-t border-ink/10 bg-paper">
+      <SectionBridge variant="to-footer" />
+
+      <footer className="bg-paper">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 py-8 sm:flex-row sm:items-center sm:px-8">
           <Logo />
           <p className="text-xs uppercase tracking-wider text-muted-foreground">
-            © {new Date().getFullYear()} MarkVision AI · Юрий
+            © {new Date().getFullYear()} MarkVision AI
           </p>
         </div>
       </footer>
