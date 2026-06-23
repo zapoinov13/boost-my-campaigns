@@ -246,10 +246,11 @@ function Landing() {
             {/* Headline block */}
             <div className="flex flex-col gap-4 sm:gap-6 lg:gap-5 lg:py-2">
               <div className="space-y-2">
-                <h1 className="font-display text-[32px] font-extrabold uppercase tracking-[-0.03em] text-ink leading-[1.06] [font-feature-settings:normal] sm:text-[52px] sm:leading-[1.04] md:text-[64px] lg:text-[46px] lg:leading-[1.05] xl:text-[54px]">
-                  <span className="block">Ты таргетолог или</span>
+                <h1 className="font-display text-[clamp(1.75rem,6.2vw,3.375rem)] font-extrabold tracking-[-0.03em] text-ink leading-[1.1] text-pretty lg:text-[clamp(2rem,3.6vw,3.25rem)] lg:leading-[1.08]">
+                  <span className="block">Ты таргетолог?</span>
                   <span className="block">
-                    у тебя <span className="text-brand">свое агентство?</span>
+                    или у тебя{" "}
+                    <span className="text-brand">маркетинговое агентство?</span>
                   </span>
                 </h1>
               </div>
