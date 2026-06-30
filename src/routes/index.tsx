@@ -443,7 +443,9 @@ function Landing() {
               <Reveal delay={340}>
                 <figure className="mt-8 border-l-4 border-brand bg-stone/60 px-5 py-5 sm:px-7 sm:py-6">
                   <blockquote className="font-display text-[20px] font-extrabold leading-[1.2] tracking-tight text-ink sm:text-[26px]">
-                    Я собрал систему под собственную работу. Не для продажи, для себя.
+                    Я собрал систему под собственную работу.&nbsp;
+                    <br />
+                    Не для продажи, для себя.
                   </blockquote>
                 </figure>
               </Reveal>
