@@ -380,7 +380,7 @@ function Landing() {
           <Reveal delay={0}>
             <SectionLabel>Автор</SectionLabel>
             <h2 className="font-display mt-4 text-4xl font-extrabold leading-[0.95] tracking-tight text-balance sm:text-5xl md:text-7xl">
-              Меня зовут <span className="text-brand">Юрий</span>.
+              Меня зовут <span className="text-brand">Юрий</span>
             </h2>
           </Reveal>
 
