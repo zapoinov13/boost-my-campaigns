@@ -341,7 +341,9 @@ function Landing() {
                 Знакомо?
               </h2>
               <p className="mt-5 text-[15px] leading-relaxed text-ink/70">
-                Если кивнул хотя бы на два пункта . эта информация для тебя.
+                Если кивнул хотя бы на два пункта&nbsp;&nbsp;
+                <br />
+                эта информация для тебя.
               </p>
             </Reveal>
 
