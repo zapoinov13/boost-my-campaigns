@@ -358,7 +358,12 @@ function Landing() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <p className="min-w-0 text-[15.5px] leading-relaxed text-ink sm:text-[17px]">
-                    {pain}
+                    {pain.split("\n").map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index < pain.split("\n").length - 1 && <br />}
+                      </span>
+                    ))}
                   </p>
                 </li>
               ))}
