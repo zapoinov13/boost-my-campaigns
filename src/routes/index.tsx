@@ -287,7 +287,7 @@ function Landing() {
                 </span>
               </div>
 
-              <div className="relative w-full border border-ink bg-ink max-sm:aspect-[3/4] sm:aspect-video">
+              <div className="relative w-full overflow-hidden border border-ink bg-ink">
                 {videoLoaded ? (
                   <video
                     src={VIDEO_URL}
@@ -296,21 +296,21 @@ function Landing() {
                     autoPlay
                     playsInline
                     preload="auto"
-                    className="absolute inset-0 h-full w-full bg-ink object-contain sm:object-cover"
+                    className="block w-full h-auto"
                   />
                 ) : (
                   <button
                     type="button"
                     onClick={() => setVideoLoaded(true)}
-                    className="group absolute inset-0 h-full w-full overflow-hidden"
+                    className="group relative block w-full"
                     aria-label="Play video"
                   >
                     <img
                       src={POSTER_URL}
                       alt=""
-                      loading="lazy"
+                      loading="eager"
                       decoding="async"
-                      className="absolute inset-0 h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-100"
+                      className="block w-full h-auto opacity-90 transition-opacity group-hover:opacity-100"
                     />
                     <span className="absolute inset-0 grid place-items-center">
                       <span className="grid h-16 w-16 place-items-center rounded-full bg-brand text-paper shadow-lg transition-transform group-hover:scale-110 sm:h-20 sm:w-20">
