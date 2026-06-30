@@ -3,8 +3,8 @@ import { ArrowRight, MessageCircle, Check, Play } from "lucide-react";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import yuriyUrl from "@/assets/yuriy.png";
 import logoUrl from "@/assets/markvision-logo.png";
-import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
-import heroPosterAsset from "@/assets/hero-video-poster.jpg.asset.json";
+import videoUrl from "@/assets/hero-video.mp4";
+import posterUrl from "@/assets/hero-video-poster.jpg";
 import { trackMetaLead } from "@/lib/meta-pixel";
 
 const WHATSAPP_URL =
@@ -218,8 +218,8 @@ function Reveal({
   );
 }
 
-const VIDEO_URL = heroVideoAsset.url;
-const POSTER_URL = heroPosterAsset.url;
+const VIDEO_URL = videoUrl;
+const POSTER_URL = posterUrl;
 
 function Landing() {
   const [videoLoaded, setVideoLoaded] = useState(false);
