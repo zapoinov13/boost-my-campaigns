@@ -498,14 +498,14 @@ function Landing() {
               Если хочешь так же
             </div>
             <h2 className="font-display mt-5 text-4xl font-extrabold leading-[0.98] tracking-tight text-balance sm:text-5xl md:text-7xl">
-              Жми кнопку и пиши мне в&nbsp;<span className="text-brand">WhatsApp</span>.
+              Жми кнопку и пиши мне в&nbsp;<span className="text-brand">WhatsApp</span>
             </h2>
           </Reveal>
 
           <Reveal className="mt-8 grid gap-6 border-t border-paper/15 pt-6 md:grid-cols-[1.4fr_1fr] md:gap-10" delay={120}>
             <div className="space-y-4 text-[16px] leading-[1.65] text-paper/85 sm:text-[17px]">
               <p>
-                Созвонимся на 20–30 минут, разберём твою ситуацию: как устроена твоя работа, где утекает время и что автоматизируется первым.
+                Созвонимся на 30–40 минут, разберём твою ситуацию: как устроена твоя работа, где утекает время и что автоматизируется в первую очередь.
               </p>
               <p>
                 И я покажу, как увеличить твой доход{" "}
