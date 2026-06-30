@@ -396,7 +396,7 @@ function Landing() {
                   />
                 </div>
                 <figcaption className="mt-3 text-[12px] uppercase tracking-wider text-muted-foreground">
-                  Юрий · MarkVision AI
+                  FOUNDER&nbsp;· MARKVISION AI
                 </figcaption>
               </figure>
             </Reveal>
