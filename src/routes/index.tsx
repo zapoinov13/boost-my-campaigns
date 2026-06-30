@@ -218,7 +218,8 @@ function Reveal({
   );
 }
 
-const GDRIVE_ID = "1yf4ZG4azbx-YNx_BF1-WYKfwky5obIoJ";
+const VIDEO_URL = heroVideoAsset.url;
+const POSTER_URL = heroPosterAsset.url;
 
 function Landing() {
   const [videoLoaded, setVideoLoaded] = useState(false);
