@@ -3,6 +3,8 @@ import { ArrowRight, MessageCircle, Check, Play } from "lucide-react";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import yuriyUrl from "@/assets/yuriy.png";
 import logoUrl from "@/assets/markvision-logo.png";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
+import heroPosterAsset from "@/assets/hero-video-poster.jpg.asset.json";
 import { trackMetaLead } from "@/lib/meta-pixel";
 
 const WHATSAPP_URL =
