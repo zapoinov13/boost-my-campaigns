@@ -3,6 +3,8 @@ import { ArrowRight, MessageCircle, Check, Play } from "lucide-react";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import yuriyUrl from "@/assets/yuriy.png";
 import logoUrl from "@/assets/markvision-logo.png";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
+import heroPosterAsset from "@/assets/hero-video-poster.jpg.asset.json";
 import { trackMetaLead } from "@/lib/meta-pixel";
 
 const WHATSAPP_URL =
@@ -216,7 +218,8 @@ function Reveal({
   );
 }
 
-const GDRIVE_ID = "1yf4ZG4azbx-YNx_BF1-WYKfwky5obIoJ";
+const VIDEO_URL = heroVideoAsset.url;
+const POSTER_URL = heroPosterAsset.url;
 
 function Landing() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -286,12 +289,14 @@ function Landing() {
 
               <div className="relative w-full border border-ink bg-ink max-sm:aspect-[16/8] sm:aspect-video">
                 {videoLoaded ? (
-                  <iframe
-                    src={`https://drive.google.com/file/d/${GDRIVE_ID}/preview`}
-                    title="Как работает моя система"
-                    className="absolute inset-0 h-full w-full"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
+                  <video
+                    src={VIDEO_URL}
+                    poster={POSTER_URL}
+                    controls
+                    autoPlay
+                    playsInline
+                    preload="auto"
+                    className="absolute inset-0 h-full w-full bg-ink"
                   />
                 ) : (
                   <button
@@ -301,7 +306,7 @@ function Landing() {
                     aria-label="Play video"
                   >
                     <img
-                      src={`https://drive.google.com/thumbnail?id=${GDRIVE_ID}&sz=w1280`}
+                      src={POSTER_URL}
                       alt=""
                       loading="lazy"
                       decoding="async"
