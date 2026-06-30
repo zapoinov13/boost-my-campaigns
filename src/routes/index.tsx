@@ -263,7 +263,8 @@ function Landing() {
               </p>
 
               <p className="font-body text-[15px] leading-[1.45] text-ink/70 text-pretty sm:text-[15.5px] sm:leading-[1.5] sm:text-base md:max-w-2xl lg:max-w-none">
-                Смотри видео и узнай, как я увеличил свой чек{" "}
+                Смотри видео и узнай, как я увеличил свой чек&nbsp;
+                <br />
                 <span className="font-extrabold italic text-ink border-b-2 border-ink">в 3 раза</span>{" "}
                 и стал работать меньше.
               </p>
