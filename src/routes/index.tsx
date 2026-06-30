@@ -287,7 +287,7 @@ function Landing() {
                 </span>
               </div>
 
-              <div className="relative w-full border border-ink bg-ink max-sm:aspect-[16/8] sm:aspect-video">
+              <div className="relative w-full border border-ink bg-ink max-sm:aspect-[3/4] sm:aspect-video">
                 {videoLoaded ? (
                   <video
                     src={VIDEO_URL}
@@ -296,7 +296,7 @@ function Landing() {
                     autoPlay
                     playsInline
                     preload="auto"
-                    className="absolute inset-0 h-full w-full bg-ink"
+                    className="absolute inset-0 h-full w-full bg-ink object-contain sm:object-cover"
                   />
                 ) : (
                   <button
@@ -319,12 +319,8 @@ function Landing() {
                     </span>
                   </button>
                 )}
-                <div className="pointer-events-none absolute bottom-3 right-3">
-                  <span className="font-display text-[10px] font-extrabold uppercase tracking-tighter text-paper/60">
-                    Video Case / 2025
-                  </span>
-                </div>
               </div>
+
             </div>
 
             {/* CTA - mobile / tablet only */}
