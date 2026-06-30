@@ -287,10 +287,10 @@ function Landing() {
               <div className="relative w-full border border-ink bg-ink max-sm:aspect-[16/8] sm:aspect-video">
                 {videoLoaded ? (
                   <iframe
-                    src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1`}
+                    src={`https://drive.google.com/file/d/${GDRIVE_ID}/preview`}
                     title="Как работает моя система"
                     className="absolute inset-0 h-full w-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allow="autoplay; encrypted-media"
                     allowFullScreen
                   />
                 ) : (
@@ -301,7 +301,7 @@ function Landing() {
                     aria-label="Play video"
                   >
                     <img
-                      src={`https://i.ytimg.com/vi/${YOUTUBE_ID}/hqdefault.jpg`}
+                      src={`https://drive.google.com/thumbnail?id=${GDRIVE_ID}&sz=w1280`}
                       alt=""
                       loading="lazy"
                       decoding="async"
