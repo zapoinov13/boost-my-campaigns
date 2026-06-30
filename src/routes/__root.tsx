@@ -78,18 +78,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "This application automates marketing tasks for specialists, enabling them to manage more clients and increase income." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "This application automates marketing tasks for specialists, enabling them to manage more clients and increase income." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "This application automates marketing tasks for specialists, enabling them to manage more clients and increase income." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0a92bdbb-1e65-4b9e-9411-b0d9d09671d4/id-preview-86cb3295--482ddce8-32fa-4add-8f8c-035626ea1526.lovable.app-1781353680449.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0a92bdbb-1e65-4b9e-9411-b0d9d09671d4/id-preview-86cb3295--482ddce8-32fa-4add-8f8c-035626ea1526.lovable.app-1781353680449.png" },
     ],
     links: [
       {

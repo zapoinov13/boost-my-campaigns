@@ -5,6 +5,7 @@ import yuriyUrl from "@/assets/yuriy.png";
 import logoUrl from "@/assets/markvision-logo.png";
 import videoUrl from "@/assets/hero-video.mp4";
 import posterUrl from "@/assets/hero-video-poster.jpg";
+import { OG_IMAGE_URL, SITE_URL } from "@/lib/site";
 import { trackMetaLead } from "@/lib/meta-pixel";
 
 const WHATSAPP_URL =
@@ -25,16 +26,21 @@ export const Route = createFileRoute("/")({
       { name: "theme-color", content: "#FFFFFF" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "article" },
-      { property: "og:image", content: yuriyUrl },
-      { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:site_name", content: "MarkVision AI" },
+      { property: "og:locale", content: "ru_RU" },
+      { property: "og:image", content: OG_IMAGE_URL },
+      { property: "og:image:width", content: "1280" },
+      { property: "og:image:height", content: "800" },
+      { property: "og:image:alt", content: "MarkVision AI — система для таргетологов и агентств" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
-      { name: "twitter:image", content: yuriyUrl },
+      { name: "twitter:image", content: OG_IMAGE_URL },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: SITE_URL },
       { rel: "icon", type: "image/png", href: logoUrl },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
@@ -302,7 +308,7 @@ function Landing() {
                   <button
                     type="button"
                     onClick={() => setVideoLoaded(true)}
-                    className="group relative block w-full"
+                    className="group relative block w-full overflow-hidden"
                     aria-label="Play video"
                   >
                     <img
@@ -312,9 +318,9 @@ function Landing() {
                       decoding="async"
                       className="block w-full h-auto opacity-90 transition-opacity group-hover:opacity-100"
                     />
-                    <span className="absolute inset-0 grid place-items-center">
-                      <span className="grid h-16 w-16 place-items-center rounded-full bg-brand text-paper shadow-lg transition-transform group-hover:scale-110 sm:h-20 sm:w-20">
-                        <Play className="ml-1 h-7 w-7 fill-paper sm:h-8 sm:w-8" strokeWidth={0} />
+                    <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand text-paper shadow-lg transition-transform group-hover:scale-110 sm:h-20 sm:w-20">
+                        <Play className="h-7 w-7 fill-paper sm:h-8 sm:w-8" strokeWidth={0} />
                       </span>
                     </span>
                   </button>
