@@ -14,8 +14,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      VERCEL_ORG_ID: team_eIACQatFoKDlbDoTUEFLFw2K
-      VERCEL_PROJECT_ID: prj_U1VETzqQOUsqPfIt565CTymrQdR1
+      VERCEL_ORG_ID: team_zrG14NOuYLKPp0tk948JiNUR
+      VERCEL_PROJECT_ID: prj_G78Xbh2V344FrKSHuyGhgAi1iWmi
     steps:
       - name: Checkout
         uses: actions/checkout@v4
