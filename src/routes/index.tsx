@@ -487,7 +487,7 @@ function Landing() {
         </div>
       </RevealSection>
 
-      <SectionBridge variant="to-ink" label="03 · Действие" />
+      <SectionBridge variant="to-ink" label="03 ХОЧЕШЬ ТАКЖЕ?" />
 
       {/* CTA */}
       <RevealSection className="bg-ink text-paper">
