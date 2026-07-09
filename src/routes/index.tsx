@@ -498,7 +498,7 @@ function Landing() {
 
           <Reveal className="mt-10 border-t-2 border-ink pt-6" delay={240}>
             <p className="font-display text-[22px] font-extrabold leading-tight tracking-tight text-ink sm:text-[28px]">
-              Это и есть <span className="text-brand">MarkVision AI</span> . виртуальный ассистент маркетолога.
+              Это и есть <span className="text-brand">MarkVision AI</span>{" "}&nbsp;виртуальный ассистент маркетолога и центр управления
             </p>
           </Reveal>
         </div>
