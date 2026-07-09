@@ -431,7 +431,7 @@ function Landing() {
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <Reveal className="md:sticky md:top-24 md:self-start" delay={0}>
               <h2 className="font-display text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
-                Вы стали маркетологом ради стратегии.
+                Вы стали маркетологом не ради рутины
               </h2>
               <p className="mt-5 font-display text-[20px] font-semibold leading-tight text-brand sm:text-2xl">
                 А не ради бесконечной рутины.
