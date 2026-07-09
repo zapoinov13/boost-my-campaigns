@@ -341,7 +341,7 @@ function Landing() {
               </div>
 
               <h1 className="font-display text-[clamp(1.75rem,6.5vw,3.25rem)] font-extrabold tracking-[-0.03em] text-ink leading-[1.05] uppercase">
-                КАК ТАРГЕТОЛОГУ И МАРКЕТОЛОГУ ВЫЙТИ НА 5 000 000+ ТЕНГЕ&nbsp;
+                КАК МАРКЕТОЛОГУ, ТАРГЕТОЛОГУ ИЛИ АГЕНТСТВУ ВЫЙТИ НА 5 000 000+ ТЕНГЕ В МЕСЯЦ&nbsp;
                 <br />
                 <span className="text-brand">И ПРИ ЭТОМ РАБОТАТЬ МЕНЬШЕ&nbsp;</span>
               </h1>
@@ -656,7 +656,7 @@ function Landing() {
               {[
                 { icon: Clock, title: "ЭКОНОМИЯ", value: "10 часов", sub: "в неделю" },
                 { icon: Users, title: "БЕРУ", value: "+2 клиентов", sub: "без перегруза" },
-                { icon: TrendingUp, title: "УВЕЛИЧИЛ", value: "прибыль", sub: "х2–3" },
+                { icon: TrendingUp, title: "УВЕЛИЧИЛ", value: "прибыль", sub: "х2–3 за 3–6 мес" },
               ].map((step, i, arr) => {
                 const Icon = step.icon;
                 return (
@@ -680,6 +680,12 @@ function Landing() {
                 );
               })}
             </div>
+          </Reveal>
+
+          <Reveal delay={220}>
+            <p className="mt-6 text-[13px] leading-relaxed text-ink/55 sm:text-[13.5px]">
+              * Цифры основаны на личном опыте автора и его клиентов за 2024–2026 годы. Результат в вашем случае зависит от ниши, бюджета и того, насколько последовательно вы внедрите систему.
+            </p>
           </Reveal>
         </div>
       </RevealSection>
@@ -864,9 +870,12 @@ function Landing() {
       <footer className="bg-paper">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 py-8 sm:flex-row sm:items-center sm:px-8">
           <Logo />
-          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-            © {new Date().getFullYear()} MarkVision AI
-          </p>
+          <div className="flex flex-col items-start gap-2 text-xs uppercase tracking-wider text-muted-foreground sm:flex-row sm:items-center sm:gap-6">
+            <a href="/privacy" className="hover:text-ink transition-colors">
+              Политика конфиденциальности
+            </a>
+            <p>© {new Date().getFullYear()} MarkVision AI</p>
+          </div>
         </div>
       </footer>
     </main>
