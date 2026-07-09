@@ -475,8 +475,8 @@ function Landing() {
           <Reveal delay={0}>
             <SectionLabel>Представьте</SectionLabel>
             <h2 className="font-display mt-4 text-4xl font-extrabold leading-[1.02] tracking-tight text-balance sm:text-5xl md:text-6xl">
-              Рядом с вами появился сотрудник, который{" "}
-              <span className="text-brand">никогда не устаёт.</span>
+              Рядом появился сотрудник, который{" "}
+              <span className="text-brand">никогда не устаёт</span>
             </h2>
           </Reveal>
 
