@@ -769,10 +769,10 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 md:max-w-5xl md:py-24">
           <Reveal delay={0}>
             <h2 className="font-display text-4xl font-extrabold leading-[1] tracking-tight text-balance sm:text-5xl md:text-6xl">
-              Что вы покупаете на самом деле
+              Что вы получаете на самом деле
             </h2>
             <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-ink/70 sm:text-[17px]">
-              Не программу. Не «AI». Не автоматизацию ради автоматизации. Вы покупаете:
+              Не программу. Не «AI». Не автоматизацию ради автоматизации. Вы получаете:
             </p>
           </Reveal>
 
