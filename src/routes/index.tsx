@@ -340,9 +340,9 @@ function Landing() {
                 MarkVision AI
               </div>
 
-              <h1 className="font-display text-[clamp(2rem,7.5vw,3.75rem)] font-extrabold tracking-[-0.03em] text-ink leading-[1.05]">
-                Перестаньте работать как оператор Ads Manager.{" "}
-                <span className="text-brand">Начните работать как стратег.</span>
+              <h1 className="font-display text-[clamp(1.75rem,6.5vw,3.25rem)] font-extrabold tracking-[-0.03em] text-ink leading-[1.05] uppercase">
+                КАК ТАРГЕТОЛОГУ И МАРКЕТОЛОГУ ВЫЙТИ НА 5 000 000+ ТЕНГЕ В МЕСЯЦ{" "}
+                <span className="text-brand">И ПРИ ЭТОМ РАБОТАТЬ МЕНЬШЕ</span>
               </h1>
 
               <div className="h-[2px] w-12 bg-ink" />
