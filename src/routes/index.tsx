@@ -350,7 +350,9 @@ function Landing() {
 
               <p className="font-body text-[17px] leading-[1.5] font-medium text-ink/90 text-pretty sm:text-[18px] sm:leading-[1.55] md:max-w-2xl">
                 <span className="font-extrabold text-ink">MarkVision AI</span> . AI-платформа, которая автоматизирует создание рекламы, контента, отчётов и рутинных задач маркетолога.{" "}
-                Верните до 10 часов в неделю и возьмите ещё 2–3 клиентов . без увеличения рабочего дня.
+                Верните до 10 часов в неделю и возьмите ещё 2–3 клиентов .&nbsp;
+                <br />
+                без увеличения рабочего дня.
               </p>
 
               <ul className="grid gap-2.5 sm:grid-cols-2">
