@@ -113,12 +113,12 @@ const MODULES: Array<{ icon: typeof Target; title: string; text: string }> = [
   { icon: Target, title: "AI-Таргетолог", text: "Запускает и оптимизирует рекламу 24/7" },
   { icon: Wand2, title: "Контент-завод", text: "Фото и видео креативы на месяц вперёд." },
   { icon: Globe, title: "Создание сайтов", text: "Лендинги под кампанию за 5–10 минут." },
-  { icon: Video, title: "Видео AI", text: "Ролики для рекламы без съёмок и монтажа." },
-  { icon: LineChart, title: "AI-Аналитик", text: "Гипотезы и выводы, а не сырые цифры." },
+  { icon: Video, title: "Видео AI", text: "Для рекламы без съёмок и монтажа." },
+  { icon: LineChart, title: "AI-Аналитик", text: "Гипотезы и выводы, а не просто цифры." },
   { icon: Database, title: "CRM", text: "Лиды и клиенты в одном окне." },
   { icon: BarChart3, title: "Сквозная аналитика", text: "От клика до денег в кассе." },
-  { icon: FileBarChart, title: "Автоматические отчёты", text: "Клиент получает . вы не тратите вечер." },
-  { icon: Rocket, title: "Управление рекламой", text: "Все кабинеты и клиенты из одного места." },
+  { icon: FileBarChart, title: "Автоматические отчёты", text: "Клиент получает каждое утро и вечер" },
+  { icon: Rocket, title: "Управление рекламой", text: "Все кабинеты и клиенты на одном экране" },
 ];
 
 const OBJECTIONS: Array<{ q: string; a: string }> = [
