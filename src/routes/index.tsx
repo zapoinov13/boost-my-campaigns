@@ -341,8 +341,9 @@ function Landing() {
               </div>
 
               <h1 className="font-display text-[clamp(1.75rem,6.5vw,3.25rem)] font-extrabold tracking-[-0.03em] text-ink leading-[1.05] uppercase">
-                КАК ТАРГЕТОЛОГУ И МАРКЕТОЛОГУ ВЫЙТИ НА 5 000 000+ ТЕНГЕ В МЕСЯЦ{" "}
-                <span className="text-brand">И ПРИ ЭТОМ РАБОТАТЬ МЕНЬШЕ</span>
+                КАК ТАРГЕТОЛОГУ И МАРКЕТОЛОГУ ВЫЙТИ НА 5 000 000+ ТЕНГЕ&nbsp;
+                <br />
+                <span className="text-brand">И ПРИ ЭТОМ РАБОТАТЬ МЕНЬШЕ&nbsp;</span>
               </h1>
 
               <div className="h-[2px] w-12 bg-ink" />
