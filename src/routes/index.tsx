@@ -870,9 +870,12 @@ function Landing() {
       <footer className="bg-paper">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 py-8 sm:flex-row sm:items-center sm:px-8">
           <Logo />
-          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-            © {new Date().getFullYear()} MarkVision AI
-          </p>
+          <div className="flex flex-col items-start gap-2 text-xs uppercase tracking-wider text-muted-foreground sm:flex-row sm:items-center sm:gap-6">
+            <a href="/privacy" className="hover:text-ink transition-colors">
+              Политика конфиденциальности
+            </a>
+            <p>© {new Date().getFullYear()} MarkVision AI</p>
+          </div>
         </div>
       </footer>
     </main>
