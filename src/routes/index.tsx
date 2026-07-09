@@ -367,7 +367,7 @@ function Landing() {
               </ul>
 
               <div className="hidden lg:block border-t border-ink/15 pt-5">
-                <CTAButton leadSource="hero-desktop">Получить демонстрацию</CTAButton>
+                <CTAButton leadSource="hero-desktop">Хочу так же{"\u00A0"}</CTAButton>
               </div>
             </div>
 
@@ -417,7 +417,7 @@ function Landing() {
 
             {/* CTA mobile */}
             <div className="border-t border-ink/15 pt-4 sm:pt-6 lg:hidden">
-              <CTAButton leadSource="hero-mobile">Получить демонстрацию</CTAButton>
+              <CTAButton leadSource="hero-mobile">Хочу так же{"\u00A0"}</CTAButton>
             </div>
           </div>
         </div>
@@ -851,7 +851,7 @@ function Landing() {
                   leadSource="footer-whatsapp"
                   className="!bg-paper !text-ink !border-paper hover:!bg-brand hover:!text-paper hover:!border-brand"
                 >
-                  Получить демонстрацию
+                  Хочу так же{"\u00A0"}
                 </CTAButton>
               </div>
             </div>
