@@ -511,7 +511,7 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 md:max-w-5xl md:py-24">
           <Reveal delay={0}>
             <h2 className="font-display text-4xl font-extrabold leading-[0.98] tracking-tight text-balance sm:text-5xl md:text-6xl">
-              Что изменится после внедрения системы
+              Что изменилось после внедрения системы
             </h2>
           </Reveal>
 
