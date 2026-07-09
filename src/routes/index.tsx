@@ -576,7 +576,7 @@ function Landing() {
               <Reveal className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]" delay={180}>
                 <p>
                   Я действующий маркетолог. И однажды понял, что половину рабочего дня трачу{" "}
-                  <span className="font-semibold text-ink">не на маркетинг</span> . а на дублирование кампаний, отчёты, таблицы и создание баннеров.
+                  <span className="font-semibold text-ink">не на маркетинг</span>.А на дублирование кампаний, отчёты, таблицы и создание креативов.
                 </p>
                 <p>
                   Каждый модуль MarkVision AI появился из реальной задачи маркетолога:{" "}
