@@ -434,7 +434,7 @@ function Landing() {
                 Вы стали маркетологом не ради рутины
               </h2>
               <p className="mt-5 font-display text-[20px] font-semibold leading-tight text-brand sm:text-2xl">
-                А не ради бесконечной рутины.
+                Теперь ваша работа выглядит так
               </p>
             </Reveal>
 
