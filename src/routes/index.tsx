@@ -656,7 +656,7 @@ function Landing() {
               {[
                 { icon: Clock, title: "ЭКОНОМИЯ", value: "10 часов", sub: "в неделю" },
                 { icon: Users, title: "БЕРУ", value: "+2 клиентов", sub: "без перегруза" },
-                { icon: TrendingUp, title: "Увеличиваете", value: "прибыль", sub: "х2–3" },
+                { icon: TrendingUp, title: "УВЕЛИЧИЛ", value: "прибыль", sub: "х2–3" },
               ].map((step, i, arr) => {
                 const Icon = step.icon;
                 return (
