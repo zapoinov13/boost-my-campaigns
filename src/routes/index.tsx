@@ -643,7 +643,7 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 md:max-w-5xl md:py-24">
           <Reveal delay={0}>
             <h2 className="font-display text-4xl font-extrabold leading-[1] tracking-tight text-balance sm:text-5xl md:text-6xl">
-              Почему вы будете{" "}
+              Почему я стал&nbsp;
               <span className="text-brand">зарабатывать больше</span>
             </h2>
             <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink/70 sm:text-[17px]">
