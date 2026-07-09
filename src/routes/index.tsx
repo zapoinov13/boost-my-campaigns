@@ -110,8 +110,8 @@ const TRANSFORM: Array<{ before: string; after: string }> = [
 ];
 
 const MODULES: Array<{ icon: typeof Target; title: string; text: string }> = [
-  { icon: Target, title: "AI-Таргетолог", text: "Запускает и оптимизирует рекламу за вас." },
-  { icon: Wand2, title: "Контент-завод", text: "Баннеры, посты и креативы на месяц вперёд." },
+  { icon: Target, title: "AI-Таргетолог", text: "Запускает и оптимизирует рекламу 24/7" },
+  { icon: Wand2, title: "Контент-завод", text: "Фото и видео креативы на месяц вперёд." },
   { icon: Globe, title: "Создание сайтов", text: "Лендинги под кампанию за 5–10 минут." },
   { icon: Video, title: "Видео AI", text: "Ролики для рекламы без съёмок и монтажа." },
   { icon: LineChart, title: "AI-Аналитик", text: "Гипотезы и выводы, а не сырые цифры." },
