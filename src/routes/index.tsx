@@ -588,7 +588,7 @@ function Landing() {
               <Reveal delay={260}>
                 <figure className="mt-8 border-l-4 border-brand bg-stone/60 px-5 py-5 sm:px-7 sm:py-6">
                   <blockquote className="font-display text-[20px] font-extrabold leading-[1.2] tracking-tight text-ink sm:text-[24px]">
-                    Я перестал искать новые сервисы. Я собрал один . под работу маркетолога.
+                    Я собрал единый&nbsp;<span className="text-brand">Центр управления отделом маркетинга и продаж</span>
                   </blockquote>
                 </figure>
               </Reveal>
