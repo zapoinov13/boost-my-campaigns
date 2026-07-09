@@ -83,21 +83,21 @@ const HERO_FEATURES = [
 ];
 
 const PAINS = [
-  "Создаёте по 50 Ad Set руками.",
+  "Собираете десятки объявлений вручную.",
   "Каждый вечер собираете отчёты.",
   "Проверяете рекламу даже ночью.",
-  "Не можете взять новых клиентов . в сутках просто нет часов.",
+  "Не можете взять новых клиентов — в сутках просто нет часов.",
   "Креативы заканчиваются быстрее, чем идеи.",
-  "Работаете больше . а доход почти не растёт.",
+  "Работаете больше — а доход почти не растёт.",
 ];
 
 const ASSISTANT_DOES = [
   "создаёт и запускает рекламу",
   "делает отчёты для клиентов",
-  "Создает фото и видео креативы",
-  "Создает сайты за 5 минут",
+  "создаёт фото и видео креативы",
+  "собирает сайты за 5 минут",
   "следит и оптимизирует рекламу",
-  "предлагает гипотезы идеи",
+  "предлагает гипотезы и идеи",
 ];
 
 const TRANSFORM: Array<{ before: string; after: string }> = [
@@ -105,8 +105,8 @@ const TRANSFORM: Array<{ before: string; after: string }> = [
   { before: "Ждал дизайнера несколько дней", after: "контент готов\nза 5 минут" },
   { before: "Час запускал рекламу", after: "Запуск в пару кликов" },
   { before: "Работал по вечерам", after: "Освободили вечера для семьи" },
-  { before: "5 клиентов . потолок", after: "7–8 клиентов без перегруза" },
-  { before: "Держал команду\u00a0\nв штате", after: "Одна система вместо пяти человек" },
+  { before: "5 клиентов — потолок", after: "7–8 клиентов без перегруза" },
+  { before: "Держал команду\u00a0\nв штате", after: "Одна система вместо целой команды" },
 ];
 
 const MODULES: Array<{ icon: typeof Target; title: string; text: string }> = [
@@ -117,14 +117,14 @@ const MODULES: Array<{ icon: typeof Target; title: string; text: string }> = [
   { icon: LineChart, title: "AI-Аналитик", text: "Гипотезы и выводы, а не просто цифры." },
   { icon: Database, title: "CRM", text: "Лиды и клиенты в одном окне." },
   { icon: BarChart3, title: "Сквозная аналитика", text: "От клика до денег в кассе." },
-  { icon: FileBarChart, title: "Автоматические отчёты", text: "Клиент получает каждое утро и вечер" },
+  { icon: FileBarChart, title: "Автоматические отчёты", text: "Отчёт клиенту каждое утро и вечер — без вашего участия." },
   { icon: Rocket, title: "Управление рекламой", text: "Все кабинеты и клиенты на одном экране" },
 ];
 
 const OBJECTIONS: Array<{ q: string; a: string }> = [
   {
     q: "Я уже работаю через Google Таблицы",
-    a: "Отлично. MarkVision AI не заменяет вашу систему . он убирает из неё ручную работу.",
+    a: "Отлично. MarkVision AI не заменяет вашу систему — он убирает из неё ручную работу.",
   },
   {
     q: "Я боюсь потерять контроль",
@@ -142,7 +142,7 @@ const OBJECTIONS: Array<{ q: string; a: string }> = [
 
 const CASES: Array<{ label: string; before: string; after: string }> = [
   { label: "Отчёты", before: "7 часов в неделю", after: "15 минут" },
-  { label: "Клиенты", before: "5 проектов . потолок", after: "8 проектов спокойно" },
+  { label: "Клиенты", before: "5 проектов — потолок", after: "8 проектов спокойно" },
   { label: "Команда", before: "Дизайнер + ассистент", after: "Одна система" },
   { label: "Запуск рекламы", before: "1 час на кампанию", after: "2–3 минуты" },
 ];
@@ -349,8 +349,8 @@ function Landing() {
               <div className="h-[2px] w-12 bg-ink" />
 
               <p className="font-body text-[17px] leading-[1.5] font-medium text-ink/90 text-pretty sm:text-[18px] sm:leading-[1.55] md:max-w-2xl">
-                <span className="font-extrabold text-ink">MarkVision AI</span> . AI-платформа, которая автоматизирует создание рекламы, контента, отчётов и рутинных задач маркетолога.{" "}
-                Верните до 10 часов в неделю и возьмите ещё 2–3 клиентов .&nbsp;
+                <span className="font-extrabold text-ink">MarkVision AI</span> — AI-платформа, которая автоматизирует создание рекламы, контента, отчётов и рутинных задач маркетолога.{" "}
+                Верните до 10 часов в неделю и возьмите ещё 2–3 клиентов —&nbsp;
                 <br />
                 без увеличения рабочего дня.
               </p>
@@ -376,7 +376,7 @@ function Landing() {
               <div className="flex items-center gap-3">
                 <span className="block h-2 w-2 rounded-full bg-brand animate-pulse" />
                 <span className="text-[12px] font-extrabold uppercase tracking-widest text-ink sm:text-[13px]">
-                  Смотреть видео . 2 минуты
+                  Смотреть видео — 2 минуты
                 </span>
               </div>
 
@@ -458,7 +458,7 @@ function Landing() {
 
           <Reveal className="mt-12 border-l-4 border-brand bg-paper px-5 py-5 sm:px-7 sm:py-6" delay={200}>
             <p className="font-display text-[18px] font-extrabold leading-[1.3] text-ink sm:text-[22px]">
-              Если узнали себя хотя бы в трёх пунктах . проблема не в вас.
+              Если узнали себя хотя бы в трёх пунктах — проблема не в вас.
             </p>
             <p className="mt-2 text-[15.5px] leading-relaxed text-ink/75 sm:text-[17px]">
               Просто часть вашей работы давно должна выполнять автоматизация.
@@ -498,7 +498,7 @@ function Landing() {
 
           <Reveal className="mt-10 border-t-2 border-ink pt-6" delay={240}>
             <p className="font-display text-[22px] font-extrabold leading-tight tracking-tight text-ink sm:text-[28px]">
-              Это и есть <span className="text-brand">MarkVision AI</span>{" "}&nbsp;виртуальный ассистент маркетолога и центр управления
+              Это и есть <span className="text-brand">MarkVision AI</span> — виртуальный ассистент маркетолога и центр управления
             </p>
           </Reveal>
         </div>
@@ -576,12 +576,12 @@ function Landing() {
               <Reveal className="mt-6 space-y-5 text-[16px] leading-[1.65] text-ink/85 sm:text-[17px]" delay={180}>
                 <p>
                   Я действующий маркетолог. И однажды понял, что половину рабочего дня трачу{" "}
-                  <span className="font-semibold text-ink">не на маркетинг</span>.А на дублирование кампаний, отчёты, таблицы и создание креативов.
+                  <span className="font-semibold text-ink">не на маркетинг</span> — а на дублирование кампаний, отчёты, таблицы и создание креативов.
                 </p>
                 <p>
                   Каждый модуль MarkVision AI появился из реальной задачи маркетолога:{" "}
                   сократить рутину, быстрее запускать рекламу, автоматизировать отчёты и освободить время для стратегии.{" "}
-                  Сначала эта система работала на меня . а теперь ей могут пользоваться другие специалисты и агентства.
+                  Сначала эта система работала на меня — а теперь ей могут пользоваться другие специалисты и агентства.
                 </p>
               </Reveal>
 
@@ -607,7 +607,7 @@ function Landing() {
               Что входит в систему
             </h2>
             <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink/70 sm:text-[17px]">
-              Девять модулей . каждый закрывает свой кусок рутины маркетолога. Работают вместе, а не набором вкладок в браузере.
+              Девять модулей — каждый закрывает свой кусок рутины маркетолога. Работают вместе, а не набором вкладок в браузере.
             </p>
           </Reveal>
 
@@ -694,7 +694,7 @@ function Landing() {
               «А что если…»
             </h2>
             <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink/70 sm:text-[17px]">
-              Самые частые сомнения таргетологов . и честные ответы.
+              Самые частые сомнения маркетологов — и честные ответы.
             </p>
           </Reveal>
 
@@ -842,7 +842,7 @@ function Landing() {
                   Выбор за вами.
                 </p>
                 <p className="text-paper/70">
-                  Созвонимся на 30–40 минут, разберём вашу ситуацию: как устроена работа, где утекает время и что автоматизируется в первую очередь. Бесплатно . без курса и без дожима.
+                  Созвонимся на 30–40 минут, разберём вашу ситуацию: как устроена работа, где утекает время и что автоматизируется в первую очередь. Бесплатно — без курса и без дожима.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
