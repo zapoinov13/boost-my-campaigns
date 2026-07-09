@@ -124,7 +124,7 @@ const MODULES: Array<{ icon: typeof Target; title: string; text: string }> = [
 const OBJECTIONS: Array<{ q: string; a: string }> = [
   {
     q: "Я уже работаю через Google Таблицы",
-    a: "Отлично. MarkVision AI не заменяет вашу систему . он убирает из неё ручную работу.",
+    a: "Отлично. MarkVision AI не заменяет вашу систему — он убирает из неё ручную работу.",
   },
   {
     q: "Я боюсь потерять контроль",
