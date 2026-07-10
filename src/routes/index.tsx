@@ -326,7 +326,7 @@ function Landing() {
             className="inline-flex shrink-0 items-center gap-2 border border-ink px-3 py-1.5 text-xs font-semibold text-ink transition-colors hover:bg-ink hover:text-paper sm:px-4 sm:py-2 sm:text-sm"
           >
             <MessageCircle className="h-4 w-4" strokeWidth={2.2} />
-            WhatsApp
+            Написать
           </a>
         </div>
       </header>
