@@ -20,8 +20,10 @@ import {
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import yuriyUrl from "@/assets/yuriy.png";
 import logoUrl from "@/assets/markvision-logo.png";
-import videoUrl from "@/assets/hero-video.mp4";
-import posterUrl from "@/assets/hero-video-poster.jpg";
+import videoAsset from "@/assets/hero-video.mp4.asset.json";
+import posterAsset from "@/assets/hero-video-poster.jpg.asset.json";
+const videoUrl = videoAsset.url;
+const posterUrl = posterAsset.url;
 import { OG_IMAGE_URL, SITE_URL } from "@/lib/site";
 import { trackMetaLead } from "@/lib/meta-pixel";
 
