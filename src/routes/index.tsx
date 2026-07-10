@@ -326,7 +326,7 @@ function Landing() {
             className="inline-flex shrink-0 items-center gap-2 border border-ink px-3 py-1.5 text-xs font-semibold text-ink transition-colors hover:bg-ink hover:text-paper sm:px-4 sm:py-2 sm:text-sm"
           >
             <MessageCircle className="h-4 w-4" strokeWidth={2.2} />
-            WhatsApp
+            Написать
           </a>
         </div>
       </header>
@@ -369,7 +369,7 @@ function Landing() {
               </ul>
 
               <div className="hidden lg:block border-t border-ink/15 pt-5">
-                <CTAButton leadSource="hero-desktop">Хочу так же{"\u00A0"}</CTAButton>
+                <CTAButton leadSource="hero-desktop">Получить демо{"\u00A0"}</CTAButton>
               </div>
             </div>
 
@@ -419,7 +419,7 @@ function Landing() {
 
             {/* CTA mobile */}
             <div className="border-t border-ink/15 pt-4 sm:pt-6 lg:hidden">
-              <CTAButton leadSource="hero-mobile">Хочу так же{"\u00A0"}</CTAButton>
+              <CTAButton leadSource="hero-mobile">Получить демо{"\u00A0"}</CTAButton>
             </div>
           </div>
         </div>
@@ -859,7 +859,7 @@ function Landing() {
                   leadSource="footer-whatsapp"
                   className="!bg-paper !text-ink !border-paper hover:!bg-brand hover:!text-paper hover:!border-brand"
                 >
-                  Хочу так же{"\u00A0"}
+                  Записаться на созвон{"\u00A0"}
                 </CTAButton>
               </div>
             </div>
